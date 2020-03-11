@@ -18,40 +18,58 @@
         android:layout_centerInParent="true"
         android:src="@drawable/g"
         android:scaleType="centerCrop"
-        android:alpha=".65"
+        android:alpha=".3"
         android:id="@+id/whiteScreen"
         />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Now I want to make the second image (that is in the imageView) transparent. How can I do this?"
+        android:text="تجربة"
         android:layout_centerInParent="true"
         android:layout_margin="100dp"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
         android:id="@+id/sentence"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignBottom="@id/whiteScreen"
-        android:layout_centerHorizontal="true"
-        android:paddingBottom="16dp"
-        >
-        <Button
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="رجوع"
-            android:layout_marginRight="8dp"
-            android:id="@+id/back"
-            />
+            android:layout_centerHorizontal="true"
+           android:layout_alignBottom="@id/whiteScreen"
+            android:layout_marginBottom="20dp"
+            >
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="خروج"
-            android:layout_marginLeft="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/back"
+                android:background="@color/bg"
+                android:textSize="32sp"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:textColor="@android:color/white"
+                android:shadowColor="@color/colorPrimaryDark"
+                android:shadowRadius="90"
+                android:shadowDx="3"
+                android:shadowDy="8"
+                />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="خروج"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:id="@+id/exit"
+                android:textSize="32sp"
+                android:background="@color/bg"
+                android:textColor="@android:color/white"
+                />
+
+        </LinearLayout>
+
 
 </RelativeLayout>

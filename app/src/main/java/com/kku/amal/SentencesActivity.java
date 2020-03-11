@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.Random;
 
 public class SentencesActivity extends AppCompatActivity {
-
 
 
     @Override
@@ -17,7 +19,7 @@ public class SentencesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_both);
 
 
-        Button b1 = findViewById(R.id.back);
+        TextView b1 = findViewById(R.id.back);
         b1.setText("رجوع");
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,39 +29,27 @@ public class SentencesActivity extends AppCompatActivity {
                 startActivity(back);
             }
         });
+        TextView b2 = findViewById(R.id.exit);
 
 
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                moveTaskToBack(true);
+            }
+        });
 
-
-
-
-
-
-
-
-
-
-
-/*
-        String[] sentences = { }; //Array with our personal favorite choices
-
-
-
+        String[] sentences = { " تأكد ما أشتدت ظُلمتها إلاَ لتُمطر "
+                ,"ولعلك تنام الليله على أمر قد يأست منه ليوقِظك الله على فرحاً بإنفراجه "
+                , "أيا كان هذا الذي نمُر به ، سينتهي "}; //Array with our personal favorite choices
         TextView t = findViewById(R.id.sentence);
-
         Random random = new Random(); 	//Random Generator
 
         String Select = sentences[(random.nextInt(sentences.length))];
         t.setText(Select);
 
-        Button b = findViewById(R.id.back);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent random = new Intent(SentencesActivity.this, MainActivity.class);
-                startActivity(random);
-            }
-        });
+
 
 
     }
@@ -69,6 +59,4 @@ public class SentencesActivity extends AppCompatActivity {
 
             }
 
-*/
 
-    }}
